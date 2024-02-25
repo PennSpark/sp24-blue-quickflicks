@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import {Login} from "./Login";
+import Link from "next/link";
 
 export default function Home() {
 	const handleClick = async () => {
@@ -17,6 +19,10 @@ export default function Home() {
 		<div>
 			<h1>Hello Next.js!</h1>
 			<button onClick={handleClick}>Click me to say hello!</button>
+
+			<Link href="/Login">
+				Login Page
+			</Link>
 		</div>
 	);
 }
