@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import {Login} from "./Login";
+import Login from "./Login";
 import Link from "next/link";
+import "../app/globals.css";
 
 export default function Home() {
 	const handleClick = async () => {

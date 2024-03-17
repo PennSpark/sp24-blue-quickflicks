@@ -1,0 +1,1 @@
+export { TrailingIcon } from "./TrailingIcon";

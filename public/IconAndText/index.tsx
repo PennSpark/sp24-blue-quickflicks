@@ -1,0 +1,1 @@
+export { IconAndText } from "./IconAndText";
