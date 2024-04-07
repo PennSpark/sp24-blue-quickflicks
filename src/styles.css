@@ -35,7 +35,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	width: 100%;
+	width: 100vw;
 }
 
 header {
@@ -74,7 +74,7 @@ h1 {
 	padding-left: var(--game-spacing);
 	padding-right: var(--game-spacing);
 	margin: 0 auto;
-	min-width: max(300px, 55vh, 40%);
+	min-width: 100vw;
 	max-width: min(500px, 58vh, 100%);
 }
 

@@ -27,10 +27,10 @@ function WordRow({ words }) {
 
 export function SolvedWordRow({ ...props }) {
 	const DIFFICULTY_COLOR_MAP = {
-		1: "rgb(74 222 128)", // green
-		2: "rgb(251 191 36)", // amber
-		3: "rgb(129 140 248)", //indigo
-		4: "rgb(34 211 238)", //cyan
+		1: "#d90404",
+		2: "#cf3c3d",
+		3: "#fa5e5e",
+		4: "#F87F7F",
 	};
 
 	const color = `${DIFFICULTY_COLOR_MAP[props.difficulty]}`;
@@ -53,7 +53,12 @@ export function SolvedWordRow({ ...props }) {
 	return (
 		<animated.div style={springProps}>
 			{!isImageAvailable ? (
-				<div style={{ backgroundColor: color, borderRadius: 8 }}>
+				<div
+					style={{
+						backgroundColor: color,
+						borderRadius: 8,
+						color: "#fff7e9",
+					}}>
 					<p className="font-rosario font-bold pt-2 pl-4">
 						{props.category}
 					</p>
@@ -66,17 +71,21 @@ export function SolvedWordRow({ ...props }) {
 					<PopoverTrigger asChild>
 						<div
 							className="cursor-pointer hover:animate-pulse shadow-md"
-							style={{ backgroundColor: color, borderRadius: 8 }}
+							style={{
+								backgroundColor: color,
+								borderRadius: 8,
+								color: "#fff7e9",
+							}}
 							onClick={() => setHasBeenClicked(true)}>
 							{!hasBeenClicked && (
 								<Badge className="animate-pulse absolute top-0 right-0 mr-2 mt-2">
 									View More
 								</Badge>
 							)}
-							<p className="font-rosario font-bold pt-2 pl-4">
+							<p className="font-rosario font-bold pt-2 pl-4 text-white">
 								{props.category}
 							</p>
-							<p className="font-rosario font-thin pb-2 pl-4">
+							<p className="font-rosario font-thin pb-2 pl-4 text-white">
 								{props.words.join(", ")}
 							</p>
 						</div>
@@ -139,7 +148,6 @@ function GameGrid({ gameRows, shouldGridShake, setShouldGridShake }) {
 			{/* Show correct answers here after the game is over if they lost */}
 			{isGameOverAndLost && (
 				<div className="grid gap-y-2 pb-2">
-					<p>The answer categories are below.</p>
 					{gameData.map((obj) => (
 						<SolvedWordRow key={obj.category} {...obj} />
 					))}

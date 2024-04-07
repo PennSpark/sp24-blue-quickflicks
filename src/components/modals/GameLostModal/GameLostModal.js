@@ -22,7 +22,6 @@ function GameLostModal({ open }) {
 					<SolvedWordRow key={obj.category} {...obj} />
 				))}
 			</div>
-			<CountdownToNextPuzzle />
 		</BaseModal>
 	);
 }
