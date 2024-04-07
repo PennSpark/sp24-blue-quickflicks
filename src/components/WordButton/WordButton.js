@@ -62,7 +62,7 @@ function WordButton({ word, fullCandidateSize }) {
     >
       <p
         style={{ fontSize: getFontSize(word) }}
-        className="font-space-mono uppercase sm:text-xs md:text-xs"
+        className="font-Rosario-bold uppercase sm:text-xs md:text-xs"
       >
         {word}
       </p>

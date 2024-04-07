@@ -13,7 +13,7 @@ import {
 } from "../../ui/alert-dialog";
 
 function BaseModal({
-  title = "title",
+  title = "Bookends",
   trigger = undefined,
   initiallyOpen = true,
   footerElements,
