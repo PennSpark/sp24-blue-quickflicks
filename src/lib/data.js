@@ -125,30 +125,24 @@ export const CONNECTION_GAMES = [
   ],
   [
     {
-      category: "Boondocks Characters",
-      words: ["Riley", "Huey", "Jazmine", "Robert"],
-      difficulty: 1,
-      imageSrc:
-        "https://d1isxmzxwhhjbk.cloudfront.net/4/Boondocks-Characters.png",
+      category: "Oppenheimer",
+      words: ["World War II", "Newton", "Cillian Murphy", "2023"],
+      difficulty: 1
     },
     {
-      category: "Uncle ____",
-      words: ["Ruckus", "Tom", "Luke", "Ben's"],
-      difficulty: 2,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Uncle___.png",
+      category: "Coraline",
+      words: ["Spider", "Button", "Hidden Door", "Henry Selick"],
+      difficulty: 2
     },
     {
-      category: "Bobby ____",
-      words: ["Brown", "Womack", "Schmurda", "Valentino"],
-      difficulty: 3,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Bobby___.png",
+      category: "Eighth Grade",
+      words: ["Eighth Grade", "Snapchat", "Gucci", "Bo Burnham"],
+      difficulty: 3
     },
     {
-      category: "Black Panther Leadership",
-      words: ["Bobby", "Fred", "Elaine", "Kathleen"],
-      difficulty: 4,
-
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Black-Panthers.png",
+      category: "Minari",
+      words: ["Arkansas", "Farm", "Steven Yeun", "Han Yeri"],
+      difficulty: 4
     },
   ],
 ];
