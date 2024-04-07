@@ -1,23 +1,17 @@
 import React from "react";
-import Header from "../Header";
-import Game from "../Game";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { Toaster } from "../ui/toaster";
-import PuzzleDataProvider from "../../providers/PuzzleDataProvider";
-import GameStatusProvider from "../../providers/GameStatusProvider";
+import PlayConnections from "../Screens/PlayConnections";
 
 function App() {
-  return (
-    <PuzzleDataProvider>
-      <GameStatusProvider>
-        <div className="wrapper">
-          <Toaster />
-          <Header />
-          <Game />
-        </div>
-      </GameStatusProvider>
-    </PuzzleDataProvider>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<PlayConnections />} />
+				{/* <Route path="/home" element={<MainScreen />} /> */}
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
