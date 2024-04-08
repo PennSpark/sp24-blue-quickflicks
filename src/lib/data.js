@@ -125,22 +125,22 @@ export const CONNECTION_GAMES = [
   ],
   [
     {
-      category: "Oppenheimer",
+      category: "Oppenheimer 🍿",
       words: ["World War II", "Newton", "Cillian Murphy", "2023"],
       difficulty: 1
     },
     {
-      category: "Coraline",
+      category: "Coraline 🎬",
       words: ["Spider", "Button", "Hidden Door", "Henry Selick"],
       difficulty: 2
     },
     {
-      category: "Eighth Grade",
+      category: "Eighth Grade 🎥",
       words: ["Eighth Grade", "Snapchat", "Gucci", "Bo Burnham"],
       difficulty: 3
     },
     {
-      category: "Minari",
+      category: "Minari 🎞",
       words: ["Arkansas", "Farm", "Steven Yeun", "Han Yeri"],
       difficulty: 4
     },
