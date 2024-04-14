@@ -1,2 +1,4 @@
-export const GAME_TITLE = "Black Connections";
+/** @format */
+
+export const GAME_TITLE = "Bookends by Spark";
 export const MAX_MISTAKES = 4;

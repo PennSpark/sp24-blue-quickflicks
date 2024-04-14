@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import * as styles from "./WordButton.module.css";
 import { Toggle } from "../ui/toggle";
@@ -45,7 +47,7 @@ function WordButton({ word, fullCandidateSize }) {
 		let fontSize = 1;
 		if (wordLength > baseLength) {
 			const numExtraChars = wordLength - baseLength;
-			fontSize = fontSize - numExtraChars * 0.1;
+			fontSize = fontSize - numExtraChars * 0.07;
 			fontSize = Math.max(0.5, fontSize);
 			return `${fontSize}em`;
 		} else {
@@ -55,13 +57,13 @@ function WordButton({ word, fullCandidateSize }) {
 	// word = "washingtonian";
 	return (
 		<Toggle
-			className={`${styles.growShrink} select-none`}
-			variant="outline"
+			className={`${styles.growShrink} select-none text-white p-2`}
+			variant='outline'
 			pressed={isSelected}
 			onClick={flipSelection}>
 			<p
 				style={{ fontSize: getFontSize(word) }}
-				className="font-rosario uppercase sm:text-xs md:text-xs">
+				className='font-rosario uppercase font-bold leading-3'>
 				{word}
 			</p>
 		</Toggle>

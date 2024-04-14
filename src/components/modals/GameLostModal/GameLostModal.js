@@ -1,8 +1,9 @@
+/** @format */
+
 import React from "react";
 import BaseModal from "../BaseModal";
 import { SolvedWordRow } from "../../GameGrid";
 import ShareScoreButton from "../../ShareScoreButton";
-import CountdownToNextPuzzle from "../../CountdownToNextPuzzle";
 import { PuzzleDataContext } from "../../../providers/PuzzleDataProvider";
 
 function GameLostModal({ open }) {
@@ -10,17 +11,14 @@ function GameLostModal({ open }) {
 
 	return (
 		<BaseModal
-			title="You lost."
+			title={"You'll get it next time!"}
 			initiallyOpen={open}
 			footerElements={<ShareScoreButton />}
 			showActionButton={false}>
-			<div className="grid gap-y-2">
-				<p className="font-rosario text-lg font-[500] text-center">
-					Better luck next time. The correct answers are below.
+			<div className='grid gap-y-2'>
+				<p className='font-rosario text-lg font-[500] text-center'>
+					Click on each movie to learn more :{")"}
 				</p>
-				{gameData.map((obj) => (
-					<SolvedWordRow key={obj.category} {...obj} />
-				))}
 			</div>
 		</BaseModal>
 	);

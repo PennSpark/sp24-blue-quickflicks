@@ -1,7 +1,8 @@
+/** @format */
+
 import React from "react";
 
 import { generateEmojiGrid } from "../../../lib/game-helpers";
-import CountdownToNextPuzzle from "../../CountdownToNextPuzzle";
 import ShareScoreButton from "../../ShareScoreButton";
 import BaseModal from "../BaseModal";
 import { GameStatusContext } from "../../../providers/GameStatusProvider";
@@ -14,28 +15,27 @@ function ViewResultsModal() {
 
 	return (
 		<BaseModal
-			title=""
+			title='You Won!'
 			trigger={
 				<Button
-					variant="submit"
-					className="w-full bg-[#a70100]"
+					variant='submit'
+					className='w-full bg-[#a70100]'
 					children={"View Results"}
 				/>
 			}
 			initiallyOpen={false}
 			showActionButton={false}
 			footerElements={
-				<ShareScoreButton buttonText={"Share Your Score!"} />
+				<ShareScoreButton buttonText={"Share My Score!"} />
 			}>
-			<div className="flex flex-col place-content-center">
-				<p className="text-center font-[600]">
-					Your Guesses Are Represented Below
+			<div className='flex flex-col place-content-center'>
+				<p className='text-center font-[600]'>
+					Click on each movie to learn more :{`)`}
 				</p>
-				<span className="text-center whitespace-pre mb-2">
+				<span className='text-center whitespace-pre mb-2'>
 					{"\n"}
 					{generateEmojiGrid(gameData, submittedGuesses)}
 				</span>
-				<CountdownToNextPuzzle />
 			</div>
 		</BaseModal>
 	);

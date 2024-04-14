@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { shuffleGameData } from "../../lib/game-helpers";
 import GameGrid from "../GameGrid";
@@ -5,7 +7,6 @@ import NumberOfMistakesDisplay from "../NumberOfMistakesDisplay";
 import GameLostModal from "../modals/GameLostModal";
 import GameWonModal from "../modals/GameWonModal";
 
-import { Separator } from "../ui/separator";
 import ConfettiExplosion from "react-confetti-explosion";
 
 import { PuzzleDataContext } from "../../providers/PuzzleDataProvider";
@@ -62,7 +63,7 @@ function Game() {
 
 	return (
 		<>
-			<h3 className="text-xl text-center mt-4 text-[#a70100] bg-">
+			<h3 className='text-l mx-12 py-1 rounded-md text-center mb-4 text-[#FFF8EA] bg-[#A70000]'>
 				click tiles to create movie groupings!
 			</h3>
 
@@ -84,7 +85,7 @@ function Game() {
 					setShouldGridShake={setGridShake}
 				/>
 				{showConfetti && isGameOver && (
-					<div className="grid place-content-center">
+					<div className='grid place-content-center'>
 						<ConfettiExplosion
 							particleCount={100}
 							force={0.8}
@@ -92,8 +93,6 @@ function Game() {
 						/>
 					</div>
 				)}
-				<Separator />
-
 				{!isGameOver ? (
 					<>
 						<NumberOfMistakesDisplay />
