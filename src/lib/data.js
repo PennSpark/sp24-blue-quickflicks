@@ -68,52 +68,47 @@ export const CONNECTION_GAMES = [
   ],
   [
     {
-      category: "Church Leadership Roles",
-      words: ["Deacon", "Elder", "Minister", "Pastor"],
+      category: "Spiderman 🍿",
+      words: ["Goblin", "Responsibility", "Marvel", "Radioactive"],
       difficulty: 1,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/Church-Roles.png",
     },
     {
-      category: "Synonyms for Lucky",
-      words: ["Blessed", "Fortunate", "Favored", "Providential"],
+      category: "Interstellar 🎬",
+      words: ["Black Hole", "Matthew McConaughey", "Christopher Nolan", "Dust Bowl"],
       difficulty: 2,
-      imageSrc:
-        "https://d1isxmzxwhhjbk.cloudfront.net/3/Synonyms-for-Lucky.png",
     },
     {
-      category: "R&B Icons",
-      words: ["Tyrese", "Usher", "Brandy", "Maxwell"],
+      category: "Whiplash 🎥",
+      words: ["Jazz", "Tempo", "Potential", "Caravan"],
       difficulty: 3,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/R-B-Icons.png",
     },
 
     {
-      category: "Tupac's Movie Character Names",
-      words: ["Bishop", "Lucky", "Birdie", "Tank"],
+      category: "Aladdin 🎞",
+      words: ["Genie", "Magic Carpet", "Monkey", "Cave of Wonders"],
       difficulty: 4,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/Tupac-Movie-Roles.png",
     },
   ],
   [
     {
-      category: "Slang for 'A Lot'",
-      words: ["Bare", "Mad", "Hella", "Buku"],
+      category: "Avatar 🍿'",
+      words: ["Pandora", "Na'vi", "Unobtanium", "Eywa"],
       difficulty: 1,
     },
     {
-      category: "Slang for 'Great'",
-      words: ["Cold", "Raw", "Dope", "Lit"],
+      category: "Titanic 🎬",
+      words: ["Rosebud", "Unsinkable", "Iceberg", "Leonardo DiCaprio"],
       difficulty: 2,
     },
     {
-      category: "Ways to Refer to Money",
-      words: ["Brick", "Band", "Rack", "C-Note"],
+      category: "Starwars Episode VII 🎥",
+      words: ["Starkiller Base", "Resistance", "JJ Abrams", "First Order"],
       difficulty: 3,
     },
 
     {
-      category: "Things Needed to Make a Pizza",
-      words: ["Cheddar", "Dough", "Sauce", "Heat"],
+      category: "Jurassic World 🎞",
+      words: ["Isla Nubar", "Dr. Henry Wu", "Gyrosphere", "Chris Pratt"],
       difficulty: 4,
     },
   ],
