@@ -94,7 +94,10 @@ export function SolvedWordRow({ ...props }) {
 					</PopoverTrigger>
 					<PopoverContent>
 						<div className='text-center'>
-							<img src={props.imageSrc} className='mb-[15px]' />
+							<img
+								src={props.imageSrc}
+								className='mb-[15px] h-[200px] m-auto rounded-sm'
+							/>
 							<a
 								href={props.link}
 								target='_blank'
@@ -109,13 +112,12 @@ export function SolvedWordRow({ ...props }) {
 	);
 }
 
-function GameGrid({ gameRows, shouldGridShake, setShouldGridShake }) {
+function GameGrid({ gameRows, shouldGridShake, setShouldGridShake, index }) {
 	const { submittedGuesses, isGameOver, isGameWon, solvedGameData } =
 		React.useContext(GameStatusContext);
 
-	const gameData = getSolution(0).puzzleAnswers;
+	const gameData = getSolution(index).puzzleAnswers;
 
-	console.log(solvedGameData);
 	React.useEffect(() => {
 		const shakeEffect = window.setTimeout(() => {
 			setShouldGridShake(false);

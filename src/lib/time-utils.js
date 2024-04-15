@@ -12,7 +12,6 @@ export const getPuzzle = (index) => {
 
 export const getSolution = (index) => {
 	const puzzle = getPuzzle(index);
-	console.log("index for today: ", index);
 	return {
 		puzzleAnswers: puzzle,
 		puzzleIndex: index,

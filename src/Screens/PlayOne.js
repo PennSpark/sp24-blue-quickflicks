@@ -7,18 +7,18 @@ import { Toaster } from "../components/ui/toaster";
 import PuzzleDataProvider from "../providers/PuzzleDataProvider";
 import GameStatusProvider from "../providers/GameStatusProvider";
 
-function PlayConnections() {
+function PlayOne() {
 	return (
-		<PuzzleDataProvider>
+		<PuzzleDataProvider index={0}>
 			<GameStatusProvider>
 				<div className='wrapper'>
 					<Toaster />
 					<Header />
-					<Game />
+					<Game index={0} />
 				</div>
 			</GameStatusProvider>
 		</PuzzleDataProvider>
 	);
 }
 
-export default PlayConnections;
+export default PlayOne;

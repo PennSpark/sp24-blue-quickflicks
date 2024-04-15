@@ -9,15 +9,18 @@ import GameWonModal from "../modals/GameWonModal";
 
 import ConfettiExplosion from "react-confetti-explosion";
 
-import { PuzzleDataContext } from "../../providers/PuzzleDataProvider";
+//import { PuzzleDataContext } from "../../providers/PuzzleDataProvider";
+import { getSolution } from "../../lib/time-utils";
 import { GameStatusContext } from "../../providers/GameStatusProvider";
 import GameControlButtonsPanel from "../GameControlButtonsPanel";
 
 import ViewResultsModal from "../modals/ViewResultsModal";
 
-function Game() {
-	const { gameData, categorySize, numCategories } =
-		React.useContext(PuzzleDataContext);
+function Game({ index }) {
+	// const { gameData, categorySize, numCategories } =
+	// 	React.useContext(PuzzleDataContext);
+	const gameData = getSolution(index).puzzleAnswers;
+
 	const { submittedGuesses, solvedGameData, isGameOver, isGameWon } =
 		React.useContext(GameStatusContext);
 
@@ -83,6 +86,7 @@ function Game() {
 					gameRows={shuffledRows}
 					shouldGridShake={gridShake}
 					setShouldGridShake={setGridShake}
+					index={index}
 				/>
 				{showConfetti && isGameOver && (
 					<div className='grid place-content-center'>
