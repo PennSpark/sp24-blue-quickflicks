@@ -6,6 +6,8 @@ import { PuzzleDataContext } from "../PuzzleDataProvider";
 import {
 	loadGameStateFromLocalStorage,
 	saveGameStateToLocalStorage,
+	saveProgressToLocalStorage,
+	loadProgressToLocalStorage,
 } from "../../lib/local-storage";
 import {
 	isGameDataEquivalent,
@@ -13,7 +15,7 @@ import {
 } from "../../lib/game-helpers";
 export const GameStatusContext = React.createContext();
 
-function GameStatusProvider({ children }) {
+function GameStatusProvider({ children, index }) {
 	const { gameData } = React.useContext(PuzzleDataContext);
 	const [submittedGuesses, setSubmittedGuesses] = React.useState([]);
 	const [solvedGameData, setSolvedGameData] = React.useState(() => {
@@ -57,6 +59,12 @@ function GameStatusProvider({ children }) {
 		if (solvedGameData.length === gameData.length) {
 			setIsGameOver(true);
 			setIsGameWon(true);
+			var loadedProgress = loadProgressToLocalStorage();
+			if (loadedProgress == null) loadedProgress = [];
+			if (loadedProgress.length < index + 1) {
+				console.log("saving progress");
+				saveProgressToLocalStorage(gameData);
+			}
 		}
 		const gameState = { submittedGuesses, solvedGameData, gameData };
 		saveGameStateToLocalStorage(gameState);
@@ -67,6 +75,12 @@ function GameStatusProvider({ children }) {
 		if (numMistakesUsed >= MAX_MISTAKES) {
 			setIsGameOver(true);
 			setIsGameWon(false);
+			var loadedProgress = loadProgressToLocalStorage();
+			if (loadedProgress == null) loadedProgress = [];
+			if (loadedProgress.length < index + 1) {
+				console.log("saving progress");
+				saveProgressToLocalStorage(gameData);
+			}
 		}
 		const gameState = { submittedGuesses, solvedGameData, gameData };
 		saveGameStateToLocalStorage(gameState);

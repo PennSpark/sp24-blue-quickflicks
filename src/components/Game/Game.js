@@ -6,6 +6,10 @@ import GameGrid from "../GameGrid";
 import NumberOfMistakesDisplay from "../NumberOfMistakesDisplay";
 import GameLostModal from "../modals/GameLostModal";
 import GameWonModal from "../modals/GameWonModal";
+import {
+	loadProgressToLocalStorage,
+	saveGameStateToLocalStorage,
+} from "../../lib/local-storage";
 
 import ConfettiExplosion from "react-confetti-explosion";
 
@@ -60,7 +64,6 @@ function Game({ index }) {
 		if (isGameWon) {
 			setShowConfetti(true);
 		}
-
 		return () => window.clearTimeout(delayModalOpen);
 	}, [isGameOver]);
 

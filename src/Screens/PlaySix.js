@@ -10,7 +10,7 @@ import GameStatusProvider from "../providers/GameStatusProvider";
 function PlaySix() {
 	return (
 		<PuzzleDataProvider index={5}>
-			<GameStatusProvider>
+			<GameStatusProvider index={5}>
 				<div className='wrapper'>
 					<Toaster />
 					<Header />
