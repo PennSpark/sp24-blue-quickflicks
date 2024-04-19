@@ -8,7 +8,7 @@ import Alert from "@mui/material/Alert";
 import Link from "@mui/material/Link";
 
 function SearchCatalog() {
-	const [searchResults, setSearchResults] = useState([]);
+	const [searchResults, setSearchResults] = useState({});
 	const [error, setError] = useState(null);
 
 	const key = "f2e3394c";
@@ -41,13 +41,13 @@ function SearchCatalog() {
 					{error}
 				</Alert>
 			)}
-			{searchResults && (
+			{searchResults.length > 0 && (
 				<div className='results'>
 					<MovieCard
-						imagePath={
-							"https://movies.universalpictures.com/media/opr-tsr1sheet3-look2-rgb-3-1-1-64545c0d15f1e-1.jpg"
+						imagePath={searchResults.poster}
+						imdbLink={
+							"https://www.imdb.com/title/" + searchResults.imdbID
 						}
-						imdbLink={"https://www.imdb.com/title/tt15398776/"}
 					/>
 				</div>
 			)}
