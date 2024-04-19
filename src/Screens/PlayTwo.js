@@ -17,6 +17,7 @@ function PlayTwo() {
 					<Game index={1} />
 				</div>
 			</GameStatusProvider>
+			<NavBar></NavBar>
 		</PuzzleDataProvider>
 	);
 }

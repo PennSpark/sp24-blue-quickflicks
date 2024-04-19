@@ -17,6 +17,7 @@ function PlayThree() {
 					<Game index={2} />
 				</div>
 			</GameStatusProvider>
+			<NavBar></NavBar>
 		</PuzzleDataProvider>
 	);
 }

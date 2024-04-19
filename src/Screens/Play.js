@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Button } from "../components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { loadProgressToLocalStorage } from "../lib/local-storage";
+import NavBar from "../components/NavBar/Navbar.jsx";
+import QF_logo from "../../public/QF_logo.png";
 
 function Play() {
 	var loadedProgress = loadProgressToLocalStorage();
@@ -25,7 +27,12 @@ function Play() {
 	return (
 		<div className='bg-[#1e1e1e]'>
 			<div className='w-[390px] h-[812px] top-0 left-0 rounded-[40px] overflow-hidden text-center'>
-				<p className='w-[390px] mt-[200px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
+				<img
+					className='w-[40%] mt-[40px] ml-auto mr-auto'
+					alt='QF_logo'
+					src={QF_logo}
+				/>
+				<p className='w-[390px] mt-[50px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Select your game!
 				</p>
 				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-[#fff8eb]'>
@@ -101,6 +108,7 @@ function Play() {
 					</p>
 				</div>
 			</div>
+			<NavBar></NavBar>
 		</div>
 	);
 }

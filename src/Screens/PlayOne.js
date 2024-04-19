@@ -6,6 +6,7 @@ import Game from "../components/Game";
 import { Toaster } from "../components/ui/toaster";
 import PuzzleDataProvider from "../providers/PuzzleDataProvider";
 import GameStatusProvider from "../providers/GameStatusProvider";
+import NavBar from "../components/NavBar/Navbar.jsx";
 
 function PlayOne() {
 	return (
@@ -17,6 +18,7 @@ function PlayOne() {
 					<Game index={0} />
 				</div>
 			</GameStatusProvider>
+			<NavBar></NavBar>
 		</PuzzleDataProvider>
 	);
 }

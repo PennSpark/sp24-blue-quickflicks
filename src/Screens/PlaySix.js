@@ -17,6 +17,7 @@ function PlaySix() {
 					<Game index={5} />
 				</div>
 			</GameStatusProvider>
+			<NavBar></NavBar>
 		</PuzzleDataProvider>
 	);
 }

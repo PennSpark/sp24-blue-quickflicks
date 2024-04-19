@@ -1,7 +1,9 @@
 /** @format */
 import bookends_logo from "../../public/bookends_logo.png";
+import QF_logo from "../../public/QF_logo.png";
 import { Button } from "../components/ui/button";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../components/NavBar/Navbar.jsx";
 
 function Home() {
 	const navigate = useNavigate();
@@ -11,8 +13,13 @@ function Home() {
 	};
 	return (
 		<div className='bg-[#1e1e1e]'>
-			<div className='w-[390px] h-[812px] top-0 left-0 rounded-[40px] overflow-hidden text-center'>
-				<p className='w-[390px] mt-[200px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
+			<div className='w-[390px] h-[812px] top-0 left-0 overflow-hidden text-center'>
+				<img
+					className='w-[40%] mt-[40px] ml-auto mr-auto'
+					alt='QF_logo'
+					src={QF_logo}
+				/>
+				<p className='w-[390px] mt-[50px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Welcome to...
 				</p>
 				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-[#fff8eb]'>
@@ -38,6 +45,7 @@ function Home() {
 						</p>
 					</Button>
 				</div>
+				<NavBar></NavBar>
 			</div>
 		</div>
 	);

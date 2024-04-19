@@ -11,12 +11,12 @@ const MovieCard = ({ imagePath, imdbLink }) => {
 		<div className='m-auto'>
 			{imagePath && (
 				<Card
-					className='mx-auto mt-[100px]'
+					className='mx-auto mt-[20px]'
 					variant='outlined'
-					style={{ height: 410, width: 270 }}>
+					sx={{ height: 370, width: 230 }}>
 					<CardActionArea href={imdbLink} target='_blank'>
 						<CardMedia
-							style={{ height: 410, width: 270 }}
+							style={{ height: 370, width: 230 }}
 							image={imagePath}
 							alt={imagePath}
 						/>
