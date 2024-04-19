@@ -11,6 +11,7 @@ import PlayFive from "../../Screens/PlayFive";
 import PlaySix from "../../Screens/PlaySix";
 import Play from "../../Screens/Play";
 import Home from "../../Screens/Home";
+import SearchCatalog from "../../Screens/SearchCatalog";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/play' element={<Play />} />
+				<Route path='/search' element={<SearchCatalog />} />
 				<Route path='/play/one' element={<PlayOne />} />
 				<Route path='/play/two' element={<PlayTwo />} />
 				<Route path='/play/three' element={<PlayThree />} />

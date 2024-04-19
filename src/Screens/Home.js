@@ -15,7 +15,7 @@ function Home() {
 				<p className='w-[390px] mt-[200px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Welcome to...
 				</p>
-				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-background'>
+				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-[#fff8eb]'>
 					<img
 						className='w-[92px] h-[86px] mt-[20px] ml-auto mr-auto'
 						alt='bookends_logo'

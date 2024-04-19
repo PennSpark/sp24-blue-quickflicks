@@ -28,7 +28,7 @@ function Play() {
 				<p className='w-[390px] mt-[200px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Select your game!
 				</p>
-				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-background'>
+				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-[#fff8eb]'>
 					<div className='grid gap-4 grid-cols-3 grid-rows-2 mt-[20px]'>
 						<Button
 							variant='submit'
