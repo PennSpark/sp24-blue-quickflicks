@@ -27,11 +27,12 @@ function InfoModal() {
 					<Accordion type="single" collapsible className="w-full">
 						<AccordionItem value="item-1">
 							<AccordionTrigger>
-								What's The Goal?
+								What is Bookends?
 							</AccordionTrigger>
 							<AccordionContent>
-								Find groups of items or names that share
-								something in common.
+							Bookends is a film-making term that denotes the scenes at the beginning and end of a film complementing each other. 
+							Therefore, the goal of this game is to accurately place the sixteen words into groups of four based on their shared characteristics from four movies into their own little Bookends. 
+							While you attempt to do so, we hope you learn a little more about our favorite movies along the way!
 							</AccordionContent>
 						</AccordionItem>
 						<AccordionItem value="item-2">
@@ -55,11 +56,11 @@ function InfoModal() {
 					{" "}
 					<Accordion type="single" collapsible className="w-full">
 						<AccordionItem value="item-1">
-							<AccordionTrigger>Who Are Y'all?</AccordionTrigger>
+							<AccordionTrigger>Fiona Herzog</AccordionTrigger>
 							<AccordionContent>
-								This project is brought to you by andcomputers,
-								feel free to subscribe to our writing and other
-								experiments.{" "}
+								Role: Designer
+								Favorite Movie: Everything Everywhere All at Once
+								Fun Fact: Once ate an entire habanero pepper for a friend's comedy sketch project.
 								<a
 									href="https://andcomputers.io/"
 									target="_blank"
@@ -70,7 +71,7 @@ function InfoModal() {
 						</AccordionItem>
 						<AccordionItem value="item-2">
 							<AccordionTrigger>
-								How Can I Support?
+								Raphael Renzo Martinez
 							</AccordionTrigger>
 							<AccordionContent>
 								<p className="mb-1">
@@ -120,7 +121,7 @@ function InfoModal() {
 						</AccordionItem>
 						<AccordionItem value="item-3">
 							<AccordionTrigger>
-								Any Other Projects to Check Out?
+								Xue Jiang
 							</AccordionTrigger>
 							<AccordionContent>
 								<div className="grid grid-flow-row">

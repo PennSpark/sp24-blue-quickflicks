@@ -112,7 +112,7 @@ export const CONNECTION_GAMES = [
 	[
 		{
 			category: "Marriage Story 🍿",
-			words: ["Adam Driver", "Theater", "Los Angeles", "Greta Gerwig"],
+			words: ["Adam Driver", "Theater", "Los Angeles", "Noah Baumbach"],
 			difficulty: 1,
       imageSrc:
 				"https://m.media-amazon.com/images/M/MV5BZGVmY2RjNDgtMTc3Yy00YmY0LTgwODItYzBjNWJhNTRlYjdkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
