@@ -21,7 +21,7 @@ function NavBar() {
 	};
 
 	return (
-		<div className='absolute w-[390px] h-[100px] bottom-[100px] bg-[#1a1a1a] flex flex-row border-t-[3px] border-[#fff7e9]'>
+		<div className='absolute w-[390px] h-[100px] bottom-[100px] bg-[#1e1e1e] flex flex-row border-t-[3px] border-[#fff7e9]'>
 			{!isActive("/search") && (
 				<div
 					className='w-[100] h-[70px] mx-auto pt-[10px] text-[#A70000] text-center border-t-[5px] border-[#A70000]'

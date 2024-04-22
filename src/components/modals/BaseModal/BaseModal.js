@@ -47,7 +47,7 @@ function BaseModal({
 				}}>
 				<AlertDialogHeader>
 					<AlertDialogTitle>{title}</AlertDialogTitle>
-					<AlertDialogDescription>{children}</AlertDialogDescription>
+					{children}
 				</AlertDialogHeader>
 				<AlertDialogFooter>
 					{footerElements}

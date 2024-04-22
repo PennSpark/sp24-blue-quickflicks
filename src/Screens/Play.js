@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { loadProgressToLocalStorage } from "../lib/local-storage";
 import NavBar from "../components/NavBar/Navbar.jsx";
 import QF_logo from "../../public/QF_logo.png";
+import InfoModal from "../components/modals/InfoModal";
+import { Info } from "lucide-react";
 
 function Play() {
 	var loadedProgress = loadProgressToLocalStorage();
@@ -27,8 +29,13 @@ function Play() {
 	return (
 		<div className='bg-[#1e1e1e]'>
 			<div className='w-[390px] h-[812px] top-0 left-0 rounded-[40px] overflow-hidden text-center'>
+				<div className='mt-[43px] absolute top-0 right-0'>
+					<InfoModal
+						trigger={<Info className='mr-4 stroke-white' />}
+					/>
+				</div>
 				<img
-					className='w-[40%] mt-[40px] ml-auto mr-auto'
+					className='w-[40%] mt-[36px] ml-auto mr-auto'
 					alt='QF_logo'
 					src={QF_logo}
 				/>

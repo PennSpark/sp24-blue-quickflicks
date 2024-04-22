@@ -7,9 +7,11 @@ import axios from "axios";
 import Alert from "@mui/material/Alert";
 import QF_logo from "../../public/QF_logo.png";
 import NavBar from "../components/NavBar/Navbar.jsx";
+import InfoModal from "../components/modals/InfoModal";
+import { Info } from "lucide-react";
 
 function SearchCatalog() {
-	const [searchResults, setSearchResults] = useState({});
+	const [searchResults, setSearchResults] = useState(null);
 	const [error, setError] = useState(null);
 
 	const key = "f2e3394c";
@@ -21,8 +23,12 @@ function SearchCatalog() {
 					searchParams.title.replace(/ /g, "+")
 			);
 			setSearchResults(response.data);
-			console.log(response.data.poster);
-			setError("");
+			console.log(response.data.Poster);
+			console.log(
+				`http://www.omdbapi.com/?apikey=${key}&t=` +
+					searchParams.title.replace(/ /g, "+")
+			);
+			setError(null);
 		} catch (err) {
 			setSearchResults([]);
 			setError(
@@ -34,8 +40,13 @@ function SearchCatalog() {
 	return (
 		<div className='bg-[#1e1e1e]'>
 			<div className='w-[390px] h-[812px] top-0 left-0 overflow-hidden'>
+				<div className='mt-[43px] absolute top-0 right-0'>
+					<InfoModal
+						trigger={<Info className='mr-4 stroke-white' />}
+					/>
+				</div>
 				<img
-					className='w-[40%] mt-[40px] ml-auto mr-auto'
+					className='w-[40%] mt-[36px] ml-auto mr-auto'
 					alt='QF_logo'
 					src={QF_logo}
 				/>
@@ -48,14 +59,17 @@ function SearchCatalog() {
 						{error}
 					</Alert>
 				)}
-				{searchResults.length > 0 && (
+				{searchResults && (
 					<div className='results'>
 						<MovieCard
-							imagePath={searchResults.poster}
+							imagePath={searchResults.Poster}
 							imdbLink={
 								"https://www.imdb.com/title/" +
 								searchResults.imdbID
 							}
+							title={searchResults.Title}
+							year={searchResults.Year}
+							imdbRating={searchResults.imdbRating}
 						/>
 					</div>
 				)}

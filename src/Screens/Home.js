@@ -4,6 +4,8 @@ import QF_logo from "../../public/QF_logo.png";
 import { Button } from "../components/ui/button";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar/Navbar.jsx";
+import InfoModal from "../components/modals/InfoModal";
+import { Info } from "lucide-react";
 
 function Home() {
 	const navigate = useNavigate();
@@ -13,12 +15,18 @@ function Home() {
 	};
 	return (
 		<div className='bg-[#1e1e1e]'>
-			<div className='w-[390px] h-[812px] top-0 left-0 overflow-hidden text-center'>
+			<div className='w-[390px] h-[812px] overflow-hidden text-center'>
+				<div className='mt-[43px] absolute top-0 right-0'>
+					<InfoModal
+						trigger={<Info className='mr-4 stroke-white' />}
+					/>
+				</div>
 				<img
-					className='w-[40%] mt-[40px] ml-auto mr-auto'
+					className='w-[40%] mt-[36px] ml-auto mr-auto'
 					alt='QF_logo'
 					src={QF_logo}
 				/>
+
 				<p className='w-[390px] mt-[50px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Welcome to QuickFlicks!
 				</p>
