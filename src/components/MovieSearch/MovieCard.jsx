@@ -14,10 +14,11 @@ const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 					className='mx-auto mt-[20px]'
 					variant='outlined'
 					sx={{
-						height: "45vh",
+						height: "35vh",
 						width: "20vw",
 						minWidth: "200px",
 						maxWidth: "280px",
+						minHeight: "285px",
 						backgroundColor: "#fff7e9",
 						border: 2,
 						borderColor: "#a60000",
@@ -28,10 +29,11 @@ const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 						href={imdbLink}
 						target='_blank'
 						sx={{
-							height: "45vh",
+							height: "35vh",
 							width: "20vw",
 							minWidth: "200px",
 							maxWidth: "280px",
+							minHeight: "300px",
 							paddingTop: "10px",
 						}}>
 						<Badge className='animate-pulse absolute top-2 right-0 mr-2 mt-[-2]'>
