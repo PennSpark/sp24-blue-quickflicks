@@ -15,7 +15,7 @@ import SearchCatalog from "../../Screens/SearchCatalog";
 
 function App() {
 	return (
-		<>
+		<Router>
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/play' element={<Play />} />
@@ -27,7 +27,7 @@ function App() {
 				<Route path='/play/five' element={<PlayFive />} />
 				<Route path='/play/six' element={<PlaySix />} />
 			</Routes>
-		</>
+		</Router>
 	);
 }
 

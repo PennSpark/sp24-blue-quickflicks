@@ -4,14 +4,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "./components/App";
-import { HashRouter as Router } from "react-router-dom";
 
 import "./reset.css";
 import "./styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<Router>
+	<React.StrictMode>
 		<App />
-	</Router>
+	</React.StrictMode>
 );
