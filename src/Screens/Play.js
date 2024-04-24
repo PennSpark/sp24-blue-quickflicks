@@ -27,8 +27,8 @@ function Play() {
 	}, [index]);
 
 	return (
-		<div className='bg-[#1e1e1e]'>
-			<div className='w-[390px] h-[812px] top-0 left-0 rounded-[40px] overflow-hidden text-center'>
+		<div className='relative bg-[#1e1e1e] w-full h-full'>
+			<div className='w-full h-[812px] top-0 left-0 rounded-[40px] overflow-hidden text-center'>
 				<div className='mt-[43px] absolute top-0 right-0'>
 					<InfoModal
 						trigger={<Info className='mr-4 stroke-white' />}
@@ -39,7 +39,7 @@ function Play() {
 					alt='QF_logo'
 					src={QF_logo}
 				/>
-				<p className='w-[390px] mt-[50px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
+				<p className='w-full mt-[50px] font-bold text-white text-[15px] text-center tracking-[0] leading-[normal]'>
 					Select your game!
 				</p>
 				<div className='flex flex-col w-[305px] h-[258px] mt-[20px] ml-auto mr-auto rounded-[5px] bg-[#fff8eb]'>

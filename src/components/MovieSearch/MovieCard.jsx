@@ -4,6 +4,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import { CardMedia, CardActionArea, CardContent } from "@mui/material";
 import { Badge } from "../ui/badge";
+import Sparkles from "../Sparkles";
 
 const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 	return (

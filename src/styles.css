@@ -8,6 +8,12 @@
 html {
 	overflow-y: scroll;
 
+	width: 100%;
+	max-width: 430px;
+	height: 100%;
+	max-height: 780px;
+	margin: auto;
+
 	--game-spacing: 32px;
 	--header-height: 4rem;
 
@@ -26,6 +32,11 @@ html {
   */
 body {
 	font-family: rosario;
+	height: 100%;
+	max-height: 780px;
+	width: 100%;
+	max-width: 430px;
+	position: relative;
 }
 
 @media (max-height: 600px) {
@@ -35,10 +46,14 @@ body {
 }
 
 .wrapper {
+	background-color: #fff8eb;
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
-	width: 100vw;
+	height: 100%;
+	max-height: 780px;
+	width: 100%;
+	max-width: 430px;
 	padding-top: 20px;
 }
 
@@ -71,14 +86,13 @@ h1 {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	width: 390px;
 	gap: var(--game-spacing);
 	padding-top: 25px;
 	padding-bottom: var(--game-spacing);
 	padding-left: var(--game-spacing);
 	padding-right: var(--game-spacing);
 	margin: 0 auto;
-	min-width: 100vw;
-	max-width: min(500px, 58vh, 100%);
 }
 
 .banner {

@@ -38,8 +38,8 @@ function SearchCatalog() {
 	};
 
 	return (
-		<div className='bg-[#1e1e1e]'>
-			<div className='w-[390px] h-[812px] top-0 left-0 overflow-hidden'>
+		<div className='relative bg-[#1e1e1e] w-full h-full'>
+			<div className='w-full h-full top-0 left-0 overflow-hidden'>
 				<div className='mt-[43px] absolute top-0 right-0'>
 					<InfoModal
 						trigger={<Info className='mr-4 stroke-white' />}
