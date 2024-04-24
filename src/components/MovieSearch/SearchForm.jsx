@@ -16,7 +16,7 @@ const SearchForm = ({ onSearch }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='flex flex-row w-full pt-[30px] px-[20px] font-rosario'>
+			className='flex flex-row w-full px-[20px] font-rosario'>
 			<img
 				className='w-[30px] h-[30px] my-auto mr-[5px]'
 				src={search}
