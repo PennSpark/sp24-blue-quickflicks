@@ -19,13 +19,13 @@ function SearchCatalog() {
 	const handleSearch = async (searchParams) => {
 		try {
 			const response = await axios.get(
-				`http://www.omdbapi.com/?apikey=${key}&t=` +
+				`https://www.omdbapi.com/?apikey=${key}&t=` +
 					searchParams.title.replace(/ /g, "+")
 			);
 			setSearchResults(response.data);
 			console.log(response.data.Poster);
 			console.log(
-				`http://www.omdbapi.com/?apikey=${key}&t=` +
+				`https://www.omdbapi.com/?apikey=${key}&t=` +
 					searchParams.title.replace(/ /g, "+")
 			);
 			setError(null);
