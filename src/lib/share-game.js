@@ -12,6 +12,19 @@ const parser = new UAParser();
 const browser = parser.getBrowser();
 const device = parser.getDevice();
 
+function wordToInt(word) {
+	const wordMap = {
+		one: 1,
+		two: 2,
+		three: 3,
+		four: 4,
+		five: 5,
+		six: 6,
+	};
+
+	return wordMap[word];
+}
+
 export const shareStatus = (
 	gameData,
 	submittedGuesses,
@@ -20,8 +33,9 @@ export const shareStatus = (
 	includeGameLink = true
 ) => {
 	const GAME_URL = window.location.href;
+	const parts = GAME_URL.split("/");
 	const textToShare =
-		`${GAME_TITLE} #${getSolution(0).puzzleIndex + 1}\n\n` +
+		`${GAME_TITLE} #${wordToInt(parts[parts.length - 1])}\n\n` +
 		generateEmojiGrid(gameData, submittedGuesses, true) +
 		`${includeGameLink ? "\n\n" + GAME_URL : ""}`;
 

@@ -56,7 +56,7 @@ function GameStatusProvider({ children, index }) {
 
 	// use effect to check if game is won
 	React.useEffect(() => {
-		if (solvedGameData.length === gameData.length) {
+		if (isGameDataEquivalent({ gd1: solvedGameData, gd2: gameData })) {
 			setIsGameOver(true);
 			setIsGameWon(true);
 			var loadedProgress = loadProgressToLocalStorage();
