@@ -4,7 +4,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import { CardMedia, CardActionArea, CardContent } from "@mui/material";
 import { Badge } from "../ui/badge";
-import Sparkles from "../Sparkles";
+import PosterNA from "../../../public/PosterNA.png";
 
 const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 	return (
@@ -14,43 +14,49 @@ const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 					className='mx-auto mt-[20px]'
 					variant='outlined'
 					sx={{
-						height: 370,
-						width: 330,
+						height: "45vh",
+						width: "20vw",
+						minWidth: "200px",
+						maxWidth: "280px",
 						backgroundColor: "#fff7e9",
 						border: 2,
 						borderColor: "#a60000",
 						textAlign: "center",
+						position: "relative",
 					}}>
-					<CardActionArea href={imdbLink} target='_blank'>
-						<Badge className='animate-pulse absolute top-0 right-0 mr-2 mt-[-2]'>
+					<CardActionArea
+						href={imdbLink}
+						target='_blank'
+						sx={{
+							height: "45vh",
+							width: "20vw",
+							minWidth: "200px",
+							maxWidth: "280px",
+							paddingTop: "10px",
+						}}>
+						<Badge className='animate-pulse absolute top-2 right-0 mr-2 mt-[-2]'>
 							Learn More
 						</Badge>
 						{imagePath === "N/A" ? (
 							<CardMedia
 								style={{
-									height: 296,
-									width: 310,
+									height: 105,
+									width: 140,
+									objectFit: "stretch",
 									margin: "auto",
-									marginTop: 10,
-									marginBottom: 0,
+
 									border: 2,
 									borderRadius: "0.3rem",
 								}}
-								image={
-									"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
-								}
-								alt={
-									"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
-								}
+								image={PosterNA}
+								alt={PosterNA}
 							/>
 						) : (
 							<CardMedia
 								style={{
-									height: 296,
-									width: 200,
+									height: 222,
+									width: 150,
 									margin: "auto",
-									marginTop: 10,
-									marginBottom: 0,
 									border: 2,
 									borderRadius: "0.3rem",
 								}}
@@ -61,8 +67,10 @@ const MovieCard = ({ imagePath, imdbLink, title, year, imdbRating }) => {
 						<CardContent>
 							<p
 								style={{
-									marginTop: -10,
-									marginBottom: 0,
+									position: "absolute",
+									bottom: 20,
+									left: 0,
+									right: 0,
 								}}>
 								<b>
 									{title.includes("(")
