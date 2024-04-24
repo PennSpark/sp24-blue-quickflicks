@@ -33,6 +33,7 @@
 		"react-router-dom": "^6.22.3",
 		"react-spring": "^9.7.3",
 		"rimraf": "5.0.1",
+		"shx": "^0.3.4",
 		"styled-components": "^6.1.0",
 		"tailwind-merge": "^1.14.0",
 		"tailwindcss-animate": "^1.0.7",
@@ -41,10 +42,11 @@
 	"scripts": {
 		"predev": "rimraf .parcel-cache dist",
 		"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html",
-		"nc": "new-component",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"prebuild-dev": "shx rm -rf dist/*",
+		"build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+		"prebuild": "shx rm -rf dist/*",
+		"build": "parcel build ./src/index.html --public-url ./",
+		"push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
 	},
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"devDependencies": {
